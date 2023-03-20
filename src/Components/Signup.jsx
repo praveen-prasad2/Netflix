@@ -3,34 +3,7 @@ import '../Stylesheets/Signup.css'
 import { Link } from 'react-router-dom'
 import Icon from '@mui/material/Icon';
 import LanguageIcon from '@mui/icons-material/Language';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 
 
 function Signup() {
@@ -60,7 +33,7 @@ function Signup() {
                 <h3>Ready to watch? Enter to create or restart your membership.</h3>
                 <div className='btncontainer'>
                     <input className='input' type="email" placeholder='Email address' />
-                    <button className='btn1'>Get Started <ArrowForwardIosIcon /></button>
+                    <button className='btn1'><Link to='/home' > Get Started <ArrowForwardIosIcon /></Link></button>
                 </div>
                 </div>
             </div>
