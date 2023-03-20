@@ -2,25 +2,81 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 
 
 .formdata{
-    margin-top: 100px   ;
+    margin-top: 50px   ;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     flex-direction: column;
     width: 450px;
     height: 660px;
     background-color: #000000BF;
 }
 
-input{
+.input{
     width: 314px;
     height: 50px;
     background-color: #333;
     margin-bottom: 20px;
+    font-family: monospace;
+    margin-left: 50px;
+    margin-top: 20px;
 }
 
+.heading{
+    margin-top: 60px;
+    margin-left: 50px;
+}
+.sign{
+   
+    width: 338px;
+    height: 50px;
+    margin-left: 50px;
+}
+.pass{
+    margin-top: 5px;
+}
+.remember{
+    margin-left: 50px;
+    margin-top: 7px;
+
+    display: flex;
+    justify-content: space-between;
+}
+input[type=checkbox]{
+            width: 25px;
+            height: 18px;
+            border-radius: 5px;
+}
+label{
+    
+}
+
+.options{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Nunito', sans-serif;
+    color: #b3b3b3; ;
+    
+
+}
+
+.needhelp{
+    font-size: 13px;
+    font-family: 'Nunito', sans-serif;
+    margin-right: 70px;
+    color: #b3b3b3; ;
+    text-decoration: none;
+}
+
+.checkbox{
+    margin-left: 45px;
+    font-size: 13px;
+}

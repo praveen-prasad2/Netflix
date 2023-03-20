@@ -4,20 +4,30 @@ import { useNavigate } from 'react-router-dom'
 
 
 
+
 function Signin() {
    
   return (
     <>
 
     <div className="wrapper">
+    <div className="image">
+                    <img id='logo' src="/images/logo.png"  alt="logo" />
+      </div>
         <div className="form">
         <div className="formdata">
-            <h1>Signin</h1>
-            <input type="email" name="" id="email" />
-            <input type="password" name="" id="password" />
+            <h1 className='heading'>Signin</h1>
+            <input  className='input' type="email" name="" id="email" />
+            <input className='input pass' type="password" name="" id="password" />
             <button className='sign'>Signin</button>
-            <input type="checkbox" name="" id="" /><label htmlFor="checkbox">Rememeber me</label>
-        </div>
+           <div className="options">
+              <div className='checkbox'>
+                <input type="checkbox" name="" id="" /><label htmlFor="checkbox">Rememeber me</label>
+              </div>
+                <a href="" className='needhelp'>Need help?</a></div>
+            </div>
+       
+       
         </div>
     </div>
     </>
