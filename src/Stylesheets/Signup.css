@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com'); 
 
-body {
+.bg{
     color: white;
     background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/d049a3bd-40ee-411b-9f16-d1def798d43b/d6aeb5a9-b14c-42d4-999e-c2f0d6c60f04/IN-en-20230313-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
+    width: 100%;
+    height: 720px;
+    background-size: cover;
     /* background-color: black;
     opacity: .4; */
     
 }
 
-.vignette{
+ .vignette{
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
     background: rgb(0 0 0 / 70%);
     position: absolute;
@@ -16,7 +19,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-}
+} 
 
 nav {
     display: flex;
@@ -37,7 +40,18 @@ button {
     height: 48px;
     font-size: 18px;
     padding: 8px 16px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    
 }
+
+.btn1 .get{
+    color: white;
+    text-decoration: none;
+}
+
+
 
 .center {
     display: flex;
@@ -114,6 +128,9 @@ h1{
 }
 .navbar{
     margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .english{
     margin-right: 20px;

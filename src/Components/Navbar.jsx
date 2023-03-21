@@ -3,6 +3,7 @@ import '../Stylesheets/Navbar.css'
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 
 
 function navbar() {
@@ -25,7 +26,7 @@ function navbar() {
           <div className="profile">
            <ArrowDropDownIcon className='icon'  />
           <div className="options">
-            <span>Manage Profiles</span>
+            <span><EditOutlinedIcon/> Manage Profiles</span>
             <span>Transfer Profile</span>
             <span>Account</span>
             <span>Logout</span>

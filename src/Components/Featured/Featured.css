@@ -1,0 +1,55 @@
+.featured{
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.info img{
+    width: 600px;
+    height: 300 px;
+}
+
+.info{
+    width: 35%;
+    position: absolute;
+    left: 50px;
+    bottom: 100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.desc{
+    margin: 20px 0px;
+    font-family: 'Varela Round', sans-serif;
+    color: #ffffff;
+}
+
+.buttons{
+    display: flex;
+}
+
+.buttons button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.buttons .play{
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.buttons .more{
+    background-color: #6d6d6eb3;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
