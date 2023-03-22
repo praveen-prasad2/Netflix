@@ -9,7 +9,7 @@ function Signin() {
    
   return (
     <>
-
+<div className="background">
     <div className="wrapper">
     <div className="image">
                     <img id='logo' src="/images/logo.png"  alt="logo" />
@@ -30,6 +30,7 @@ function Signin() {
        
         </div>
     </div>
+    </div>    
     </>
   )
 }

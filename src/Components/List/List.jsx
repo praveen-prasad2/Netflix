@@ -1,11 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './List.css'
 import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import ListItem from '../Listitem/ListItem';
 import { useRef } from 'react';
+import {actionurl} from '../../API/API_KEY'
+import axios from 'axios';
 
 function List() {
+
+  const [allMovie,setAllMovie]=useState()
+
+async  function fetchMovie(){
+  const response=await axios.get(actionurl)
+  setAllMovie(response.data.results)
+    console.log(response)
+  }
+
+  useEffect(()=>{fetchMovie()},[])
+
+  
   const[isMoved,setIsMoved]=useState(false)
   const[slideNumber,setslideNumber]=useState(0)
 
@@ -31,16 +45,16 @@ function List() {
         <div className="wrapper">
           <ArrowBackIosNewOutlinedIcon className='sliderarrow left' onClick={()=>handleClick("left")} style={{display:!isMoved && "none"}}/>
           <div className="container" ref={listRef}>
-            <ListItem index={0} />
-            <ListItem index={1} />
-            <ListItem index={2} />
-            <ListItem index={3} />
-            <ListItem index={4} />
-            <ListItem index={5} />
-            <ListItem index={6} />
-            <ListItem index={7} />
-            <ListItem index={8} />
-            <ListItem index={9} />
+            <ListItem index={0}/>
+            {
+              allMovie && allMovie.map((movie,key)=>{
+            return(
+            <ListItem index={key}/>
+            )
+
+              })
+            }
+          
           </div>
           <ArrowForwardIosOutlinedIcon className='sliderarrow right' onClick={()=>handleClick("right")}/>
         </div>
