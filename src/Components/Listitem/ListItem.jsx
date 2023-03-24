@@ -14,7 +14,8 @@ function ListItem({ index, movie }) {
       className="listitem"
       style={{
         left: isHovered && index * 225 - 50 + index * 2.5,
-        background: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,backgroundSize:'cover'
+        background: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
+        backgroundSize:'cover'
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
