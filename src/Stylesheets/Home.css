@@ -15,6 +15,6 @@
 
 .background{
     background-color: black;
-    height: 1300px;
+    min-height: 1300px;
     overflow: hidden;
 }

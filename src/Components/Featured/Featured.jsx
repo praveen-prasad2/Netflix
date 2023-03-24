@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import './Featured.css'

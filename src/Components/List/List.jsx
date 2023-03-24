@@ -4,14 +4,13 @@ import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutl
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import ListItem from "../Listitem/ListItem";
 import { useRef } from "react";
-import { actionurl } from "../../API/API_KEY";
 import axios from "axios";
 
-function List() {
+function List({title,url}) {
   const [allMovie, setAllMovie] = useState();
 
   async function fetchMovie() {
-    const response = await axios.get(actionurl);
+    const response = await axios.get(url);
     setAllMovie(response.data.results);
     // console.log(response);
   }
@@ -41,7 +40,7 @@ function List() {
   };
   return (
     <div className="list">
-      <span className="listTitle">Continue to watch</span>
+      <span className="listTitle">{title}</span>
       <div className="wrapper">
         <ArrowBackIosNewOutlinedIcon
           className="sliderarrow left"
