@@ -1,14 +1,32 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import "./ListItem.css";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import AddIcon from "@mui/icons-material/Add";
 import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { trailerApi } from "../../API/API_KEY";
+import axios from "axios";
+import YouTube from "react-youtube";
+import Dialog from '@mui/material/Dialog';
 
 function ListItem({ index, movie }) {
   const [isHovered, setIsHovered] = useState(false);
-  const trailer = "https://www.youtube.com/watch?v=b9EkMc79ZSU";
-  // console.log(movie);
+
+  
+  const [trailer,setTrailer]=useState()
+  const [open,setOpen]=useState(false)
+function handleClose(){
+ setOpen(false)
+}
+  async function playTrailer() {
+    const response = await axios.get(trailerApi(movie.id));
+    setTrailer(response.data.results[0]);
+    console.log(trailer)
+    setOpen(true)
+    // console.log(response);
+  }
+
+  
   return (
     <div
       className="listitem"
@@ -26,9 +44,10 @@ function ListItem({ index, movie }) {
       /> */}
       {isHovered && (
         <>
-          <div className="iteminfo">
+          <div className="iteminfo" onClick={playTrailer}>
             <p>{movie.title}</p>
-            <div className="icons">
+
+            <div className="icons" >
               <PlayArrowIcon className="icon" />
               <AddIcon className="icon" />
               <ThumbUpOutlinedIcon className="icon" />
@@ -42,9 +61,15 @@ function ListItem({ index, movie }) {
 
             <div className="genre">Thriller</div>
           </div>
+
+          {trailer && 
+          <Dialog open={open} onClose={handleClose}>  
+        <YouTube videoId={trailer.key} /></Dialog> }
         </>
+
       )}
     </div>
+
   );
 }
 

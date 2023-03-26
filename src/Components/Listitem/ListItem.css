@@ -29,16 +29,21 @@ video{
     position: absolute;
     top: -150px;
     border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .listitem img:hover{
     height: 140px;
+    object-fit: cover;
 }
 
 .iteminfo{
     display: flex;
     flex-direction: column;
     padding: 5px;
+    background-color: rgba(83, 78, 78, 0.366);
+    width: 100%;
 }
 .icons{
     display: flex;
@@ -82,3 +87,4 @@ video{
     font-family: 'Nunito', sans-serif;
 
 }
+

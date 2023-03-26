@@ -27,15 +27,16 @@ function List({title,url}) {
   const handleClick = (direction) => {
     setIsMoved(true);
     let distance = listRef.current.getBoundingClientRect().x - 50;
-    if (direction == "left" && slideNumber > 0) {
-      setslideNumber(slideNumber - 1);
+    console.log(slideNumber)
+    if (direction == "left" && slideNumber >= -1) {
+      setslideNumber((prevSlideNumber)=>{return prevSlideNumber - 1});
       listRef.current.style.transform = `translateX(${230 + distance}px)`;
-      console.log(distance);
+      // console.log(distance);
     }
-    if (direction == "right" && slideNumber < 5) {
-      setslideNumber(slideNumber + 1);
+    if (direction == "right" && slideNumber < 10) {
+      setslideNumber((prevSlideNumber)=>{return prevSlideNumber + 1});
       listRef.current.style.transform = `translateX(${-230 + distance}px)`;
-      console.log(distance);
+      // console.log(distance);
     }
   };
   return (
@@ -51,7 +52,7 @@ function List({title,url}) {
          
           {allMovie &&
             allMovie.map((movie, key) => {
-              console.log(allMovie);
+              // console.log(movie);
               return <ListItem index={key} movie={movie} />;
             })}
         </div>
